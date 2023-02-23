@@ -16,4 +16,8 @@
     <ProjectReference Include="..\Customers.Docs.Domain\Customers.Docs.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Contracts\Features\Documents\Commands\CreateDocument\" />
+  </ItemGroup>
+
 </Project>

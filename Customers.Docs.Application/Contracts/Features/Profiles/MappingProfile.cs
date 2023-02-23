@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
-using Customers.Docs.Application.Contracts.Features.Documents;
+using Customers.Docs.Application.Contracts.Features.Documents.Queries.GetDocumentDetail;
+using Customers.Docs.Application.Contracts.Features.Documents.Queries.GetDocumentsList;
 using Customers.Docs.Domain.Entities;
 
 namespace Customers.Docs.Application.Contracts.Features.Profiles

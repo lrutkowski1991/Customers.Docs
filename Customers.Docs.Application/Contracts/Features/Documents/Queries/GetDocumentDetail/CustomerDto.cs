@@ -1,4 +1,4 @@
-﻿namespace Customers.Docs.Application.Contracts.Features.Documents
+﻿namespace Customers.Docs.Application.Contracts.Features.Documents.Queries.GetDocumentDetail
 {
     public class CustomerDto
     {
