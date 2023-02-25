@@ -3,7 +3,7 @@ using Customers.Docs.Application.Contracts.Persistence;
 using Customers.Docs.Domain.Entities;
 using MediatR;
 
-namespace Customers.Docs.Application.Contracts.Features.Documents.Queries.GetDocumentsList
+namespace Customers.Docs.Application.Features.Documents.Queries.GetDocumentsList
 {
     public class GetDocumentListQueryHandler : IRequestHandler<GetDocumentListQuery, List<DocumentListVM>>
     {
