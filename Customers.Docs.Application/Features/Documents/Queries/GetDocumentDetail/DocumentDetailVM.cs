@@ -1,9 +1,9 @@
-﻿namespace Customers.Docs.Application.Contracts.Features.Documents.Queries.GetDocumentDetail
+﻿namespace Customers.Docs.Application.Features.Documents.Queries.GetDocumentDetail
 {
     public class DocumentDetailVM
     {
         public Guid DocumentId { get; set; }
-        public string Number { get; set; }
+        public string Number { get; set; } = String.Empty;
         public DateTime DateOfIssue { get; set; }
         public Guid CustomerId { get; set; }
         public CustomerDto Customer { get; set; }

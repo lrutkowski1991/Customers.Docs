@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Customers.Docs.Application.Contracts.Features.Documents.Queries.GetDocumentDetail
+namespace Customers.Docs.Application.Features.Documents.Queries.GetDocumentDetail
 {
     public class GetDocumentDetailQueryHandler : IRequestHandler<GetDocumentDetailQuery, DocumentDetailVM>
     {

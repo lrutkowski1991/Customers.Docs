@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
-namespace Customers.Docs.Application.Contracts
+namespace Customers.Docs.Application
 {
     public static class ApplicationServiceRegistration
     {
