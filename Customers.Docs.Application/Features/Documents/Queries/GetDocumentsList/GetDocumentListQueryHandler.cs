@@ -17,8 +17,8 @@ namespace Customers.Docs.Application.Features.Documents.Queries.GetDocumentsList
 
         public async Task<List<DocumentListVM>> Handle(GetDocumentListQuery request, CancellationToken cancellationToken)
         {
-            var allDocuments = (await _documentRepository.GetAllAsync()).ToList();
-            return _mapper.Map<List<DocumentListVM>>(allDocuments);
+            var documents = (await _documentRepository.GetAllAsync()).ToList();
+            return _mapper.Map<List<DocumentListVM>>(documents);
         }
 
     }
