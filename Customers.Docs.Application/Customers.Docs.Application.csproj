@@ -17,11 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Features\Customers\Commands\" />
     <Folder Include="Features\Documents\Commands\CreateDocument\" />
-    <Folder Include="Features\Customers\" />
     <Folder Include="Features\Registers\Commands\" />
     <Folder Include="Features\ServicesPerformed\Commands\" />
-    <Folder Include="Features\ServicesPerformed\Queries\" />
   </ItemGroup>
 
 </Project>

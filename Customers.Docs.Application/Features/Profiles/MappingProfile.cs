@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
+using Customers.Docs.Application.Features.Customers.Queries.GetCustomersList;
 using Customers.Docs.Application.Features.Documents.Queries.GetDocumentDetail;
 using Customers.Docs.Application.Features.Documents.Queries.GetDocumentsList;
 using Customers.Docs.Application.Features.Registers.Queries.GetRegistersList;
+using Customers.Docs.Application.Features.ServicesPerformed.Queries.GetServicesPerformedList;
 using Customers.Docs.Domain.Entities;
 
 namespace Customers.Docs.Application.Features.Profiles
@@ -10,6 +12,16 @@ namespace Customers.Docs.Application.Features.Profiles
     {
         public MappingProfile()
         {
+            #region Customers
+            /* GetCustomersList */
+            CreateMap<Customer, CustomerListVM>().ReverseMap();
+            #endregion
+
+            #region ServicesPerformed
+            /* GetServicesPerformedList */
+            CreateMap<ServicePerformed, GetServicePerformedListVM>().ReverseMap();
+            #endregion
+
             #region Registers
             /* GetRegistersList */
             CreateMap<Register, RegisterListVM>();
