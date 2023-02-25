@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Customers.Docs.Application.Contracts.Features.Documents.Queries.GetDocumentsList
+namespace Customers.Docs.Application.Features.Documents.Queries.GetDocumentsList
 {
     public class GetDocumentListQuery : IRequest<List<DocumentListVM>>
     {
