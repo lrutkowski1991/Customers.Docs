@@ -1,4 +1,6 @@
-﻿namespace Customers.Docs.Application.Contracts.Persistence
+﻿using Customers.Docs.Domain.Entities;
+
+namespace Customers.Docs.Application.Contracts.Persistence
 {
     public interface IAsyncRepository<T> where T : class
     {

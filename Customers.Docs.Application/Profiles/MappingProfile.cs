@@ -1,4 +1,7 @@
 ﻿using AutoMapper;
+using Customers.Docs.Application.Features.Customers.Commands.CreateCustomer;
+using Customers.Docs.Application.Features.Customers.Commands.DeleteCustomer;
+using Customers.Docs.Application.Features.Customers.Commands.UpdateCustomer;
 using Customers.Docs.Application.Features.Customers.Queries.GetCustomersList;
 using Customers.Docs.Application.Features.Documents.Queries.GetDocumentDetail;
 using Customers.Docs.Application.Features.Documents.Queries.GetDocumentsList;
@@ -6,7 +9,7 @@ using Customers.Docs.Application.Features.Registers.Queries.GetRegistersList;
 using Customers.Docs.Application.Features.ServicesPerformed.Queries.GetServicesPerformedList;
 using Customers.Docs.Domain.Entities;
 
-namespace Customers.Docs.Application.Features.Profiles
+namespace Customers.Docs.Application.Profiles
 {
     public class MappingProfile : Profile
     {
@@ -15,6 +18,12 @@ namespace Customers.Docs.Application.Features.Profiles
             #region Customers
             /* GetCustomersList */
             CreateMap<Customer, CustomerListVM>().ReverseMap();
+            /* CreateCustomer */
+            CreateMap<Customer, CreateCustomerCommand>().ReverseMap();
+            /* UpdateCustomer */
+            CreateMap<Customer, UpdateCustomerCommand>().ReverseMap();
+            /* DeleteCustomer */
+            CreateMap<Customer, DeleteCustomerCommand>().ReverseMap();
             #endregion
 
             #region ServicesPerformed
