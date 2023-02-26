@@ -8,9 +8,9 @@ namespace Customers.Docs.Application.Features.Customers.Commands.CreateCustomer
     public class CreateCustomerCommandHandler : IRequestHandler<CreateCustomerCommand, Guid>
     {
         private readonly IMapper _mapper;
-        private readonly IAsyncRepository<Customer> _customerRepository;
+        private readonly ICustomerRepository _customerRepository;
         public CreateCustomerCommandHandler(IMapper mapper,
-            IAsyncRepository<Customer> customerRepository)
+            ICustomerRepository customerRepository)
         {
             _mapper = mapper;
             _customerRepository = customerRepository;
