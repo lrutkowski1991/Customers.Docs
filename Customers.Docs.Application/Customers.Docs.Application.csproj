@@ -18,7 +18,8 @@
 
   <ItemGroup>
     <Folder Include="Features\Documents\Commands\CreateDocument\" />
-    <Folder Include="Features\Registers\Commands\" />
+    <Folder Include="Features\Documents\Commands\DeleteDocument\" />
+    <Folder Include="Features\Documents\Commands\UpdateDocument\" />
   </ItemGroup>
 
 </Project>
