@@ -16,10 +16,4 @@
     <ProjectReference Include="..\Customers.Docs.Domain\Customers.Docs.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\Documents\Commands\CreateDocument\" />
-    <Folder Include="Features\Documents\Commands\DeleteDocument\" />
-    <Folder Include="Features\Documents\Commands\UpdateDocument\" />
-  </ItemGroup>
-
 </Project>
