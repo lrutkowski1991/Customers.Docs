@@ -2,7 +2,7 @@
 
 namespace Customers.Docs.Application.Features.Registers.Commands.CreateRegister
 {
-    public class CreateRegisterCommand : IRequest<Guid>
+    public class CreateRegisterCommand : IRequest<CreateRegisterCommandResponse>
     {
         public string Name { get; set; } = String.Empty;
         public DateTime StartDate { get; set; }
