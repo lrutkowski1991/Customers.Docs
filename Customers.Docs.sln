@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{AF9B959F-2
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customers.Docs.Domain", "Customers.Docs.Domain\Customers.Docs.Domain.csproj", "{A00A72DB-23EA-43BD-B400-FDEC5E42C925}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customers.Docs.Application", "Customers.Docs.Application\Customers.Docs.Application.csproj", "{37B80EC8-F6B6-4F05-8A33-464A63B04AD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customers.Docs.Application", "Customers.Docs.Application\Customers.Docs.Application.csproj", "{37B80EC8-F6B6-4F05-8A33-464A63B04AD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

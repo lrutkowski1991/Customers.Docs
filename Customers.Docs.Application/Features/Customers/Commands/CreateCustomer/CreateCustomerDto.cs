@@ -3,6 +3,6 @@
     public class CreateCustomerDto
     {
         public Guid CustomerId { get; set; }
-        public string Name { get; set; }
+        public string Name { get; set; } = String.Empty;
     }
 }

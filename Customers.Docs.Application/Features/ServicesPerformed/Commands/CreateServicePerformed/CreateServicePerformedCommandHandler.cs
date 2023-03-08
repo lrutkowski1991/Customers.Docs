@@ -5,7 +5,7 @@ using MediatR;
 
 namespace Customers.Docs.Application.Features.ServicesPerformed.Commands.CreateServicePerformed
 {
-    public class CreateServicePerformedCommandHandler : IRequestHandler<CreateServicePerformedCommand, Guid>
+    public class CreateServicePerformedCommandHandler : IRequestHandler<CreateServicePerformedCommand, CreateServicePerformedCommandResponse>
     {
         private readonly IMapper _mapper;
         private readonly IServicePerformedRepository _servicePerformedRepository;
@@ -15,11 +15,32 @@ namespace Customers.Docs.Application.Features.ServicesPerformed.Commands.CreateS
             _mapper = mapper;
             _servicePerformedRepository = servicePerformedRepository;
         }
-        public async Task<Guid> Handle(CreateServicePerformedCommand request, CancellationToken cancellationToken)
+
+        public async Task<CreateServicePerformedCommandResponse> Handle(CreateServicePerformedCommand request, CancellationToken cancellationToken)
         {
-            var @servicePerformed = _mapper.Map<ServicePerformed>(request);
-            @servicePerformed = await _servicePerformedRepository.AddAsync(@servicePerformed);
-            return @servicePerformed.ServicePerformedId;
+            var createServicePerformedCommandResponse = new CreateServicePerformedCommandResponse();
+            var validator = new CreateServicePerformedCommandValidator();
+            var validationResult = await validator.ValidateAsync(request);
+
+            if (!validationResult.IsValid)
+            {
+                createServicePerformedCommandResponse.Success = false;
+                createServicePerformedCommandResponse.Errors = new List<string>();
+                validationResult.Errors.ForEach(error => createServicePerformedCommandResponse.Errors.Add(error.ErrorMessage));
+            }
+
+            if (createServicePerformedCommandResponse.Success)
+            {
+                var servicePerformed = new ServicePerformed()
+                {
+                    Name = request.Name,
+                    Value = request.Value
+                };
+                servicePerformed = await _servicePerformedRepository.AddAsync(servicePerformed);
+                createServicePerformedCommandResponse.ServicePerformedDto = _mapper.Map<CreateServicePerformedDto>(servicePerformed);
+            }
+
+            return createServicePerformedCommandResponse;
         }
     }
 }
